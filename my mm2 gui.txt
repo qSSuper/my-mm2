@@ -1,0 +1,657 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local mm2 = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local top = Instance.new("Frame")
+local Frame = Instance.new("ImageLabel")
+local mESP = Instance.new("TextButton")
+local sESP = Instance.new("TextButton")
+local farm = Instance.new("TextButton")
+local gGrabber = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local TPlobby = Instance.new("TextButton")
+local TPmurderer = Instance.new("TextButton")
+local TPsherrif = Instance.new("TextButton")
+local TPmap = Instance.new("TextButton")
+local credits = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local KillAll = Instance.new("TextButton")
+local Shownames = Instance.new("TextButton")
+local OpenClose = Instance.new("TextButton")
+
+--Properties:
+
+mm2.Name = "mm2"
+mm2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+mm2.Parent = game.CoreGui
+mm2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+mm2.ResetOnSpawn = false
+
+main.Name = "main"
+main.Parent = mm2
+main.Active = true
+main.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.742393911, 0, 0.575988412, 0)
+main.Size = UDim2.new(0, 376, 0, 409)
+
+top.Name = "top"
+top.Parent = main
+top.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+top.BorderSizePixel = 0
+top.Size = UDim2.new(0, 376, 0, 28)
+
+Frame.Name = "Frame"
+Frame.Parent = top
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0, 0, 0.785714269, 0)
+Frame.Size = UDim2.new(0, 376, 0, 16)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(255, 0, 68)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.250
+
+mESP.Name = "mESP"
+mESP.Parent = main
+mESP.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+mESP.BorderSizePixel = 0
+mESP.Position = UDim2.new(0.0452127643, 0, 0.12713936, 0)
+mESP.Size = UDim2.new(0, 95, 0, 35)
+mESP.Font = Enum.Font.SourceSansBold
+mESP.Text = "Murderer ESP"
+mESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+mESP.TextSize = 14.000
+
+sESP.Name = "sESP"
+sESP.Parent = main
+sESP.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+sESP.BorderSizePixel = 0
+sESP.Position = UDim2.new(0.372340441, 0, 0.12713936, 0)
+sESP.Size = UDim2.new(0, 95, 0, 35)
+sESP.Font = Enum.Font.SourceSansBold
+sESP.Text = "Sherrif  ESP"
+sESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+sESP.TextSize = 14.000
+
+farm.Name = "farm"
+farm.Parent = main
+farm.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+farm.BorderSizePixel = 0
+farm.Position = UDim2.new(0.707446814, 0, 0.12713936, 0)
+farm.Size = UDim2.new(0, 95, 0, 35)
+farm.Font = Enum.Font.SourceSansBold
+farm.Text = "AFK  Farm"
+farm.TextColor3 = Color3.fromRGB(255, 255, 255)
+farm.TextSize = 14.000
+
+gGrabber.Name = "gGrabber"
+gGrabber.Parent = main
+gGrabber.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+gGrabber.BorderSizePixel = 0
+gGrabber.Position = UDim2.new(0.0452127457, 0, 0.259168684, 0)
+gGrabber.Size = UDim2.new(0, 95, 0, 35)
+gGrabber.Font = Enum.Font.SourceSansBold
+gGrabber.Text = "Gun Grabber"
+gGrabber.TextColor3 = Color3.fromRGB(255, 255, 255)
+gGrabber.TextSize = 14.000
+
+Fly.Name = "Fly"
+Fly.Parent = main
+Fly.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.372340411, 0, 0.259168684, 0)
+Fly.Size = UDim2.new(0, 95, 0, 35)
+Fly.Font = Enum.Font.SourceSansBold
+Fly.Text = "Fly (L)"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextSize = 14.000
+
+Noclip.Name = "Noclip"
+Noclip.Parent = main
+Noclip.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Noclip.BorderSizePixel = 0
+Noclip.Position = UDim2.new(0.707446814, 0, 0.259168684, 0)
+Noclip.Size = UDim2.new(0, 95, 0, 35)
+Noclip.Font = Enum.Font.SourceSansBold
+Noclip.Text = "Noclip (B)"
+Noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Noclip.TextSize = 14.000
+
+TPlobby.Name = "TPlobby"
+TPlobby.Parent = main
+TPlobby.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+TPlobby.BorderSizePixel = 0
+TPlobby.Position = UDim2.new(0.0452127457, 0, 0.701711476, 0)
+TPlobby.Size = UDim2.new(0, 95, 0, 35)
+TPlobby.Font = Enum.Font.SourceSansBold
+TPlobby.Text = "TP to Lobby"
+TPlobby.TextColor3 = Color3.fromRGB(255, 255, 255)
+TPlobby.TextSize = 14.000
+
+TPmurderer.Name = "TPmurderer"
+TPmurderer.Parent = main
+TPmurderer.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+TPmurderer.BorderSizePixel = 0
+TPmurderer.Position = UDim2.new(0.372340411, 0, 0.701711476, 0)
+TPmurderer.Size = UDim2.new(0, 95, 0, 35)
+TPmurderer.Font = Enum.Font.SourceSansBold
+TPmurderer.Text = "TP to Murderer"
+TPmurderer.TextColor3 = Color3.fromRGB(255, 255, 255)
+TPmurderer.TextSize = 14.000
+
+TPsherrif.Name = "TPsherrif"
+TPsherrif.Parent = main
+TPsherrif.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+TPsherrif.BorderSizePixel = 0
+TPsherrif.Position = UDim2.new(0.707446754, 0, 0.701711476, 0)
+TPsherrif.Size = UDim2.new(0, 95, 0, 35)
+TPsherrif.Font = Enum.Font.SourceSansBold
+TPsherrif.Text = "TP to Sherrif"
+TPsherrif.TextColor3 = Color3.fromRGB(255, 255, 255)
+TPsherrif.TextSize = 14.000
+
+TPmap.Name = "TPmap"
+TPmap.Parent = main
+TPmap.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+TPmap.BorderSizePixel = 0
+TPmap.Position = UDim2.new(0.371638417, 0, 0.844806314, 0)
+TPmap.Size = UDim2.new(0, 95, 0, 35)
+TPmap.Font = Enum.Font.SourceSansBold
+TPmap.Text = "TP to Map"
+TPmap.TextColor3 = Color3.fromRGB(255, 255, 255)
+TPmap.TextSize = 14.000
+
+credits.Name = "credits"
+credits.Parent = main
+credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits.BackgroundTransparency = 1.000
+credits.Position = UDim2.new(0.199468091, 0, 0.437652826, 0)
+credits.Size = UDim2.new(0, 226, 0, 50)
+credits.Font = Enum.Font.SourceSansBold
+credits.Text = "Made by  super#5059"
+credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+credits.TextSize = 48.000
+
+Title.Name = "Title"
+Title.Parent = main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.225999996, 0, -0.0120000001, 0)
+Title.Size = UDim2.new(0, 200, 0, 50)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Supers mm2 gui"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 24.000
+
+KillAll.Name = "KillAll"
+KillAll.Parent = main
+KillAll.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+KillAll.BorderSizePixel = 0
+KillAll.Position = UDim2.new(0.044510752, 0, 0.844806314, 0)
+KillAll.Size = UDim2.new(0, 95, 0, 35)
+KillAll.Font = Enum.Font.SourceSansBold
+KillAll.Text = "Kill All"
+KillAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillAll.TextSize = 14.000
+
+Shownames.Name = "Shownames"
+Shownames.Parent = main
+Shownames.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Shownames.BorderSizePixel = 0
+Shownames.Position = UDim2.new(0.70674479, 0, 0.844806314, 0)
+Shownames.Size = UDim2.new(0, 95, 0, 35)
+Shownames.Font = Enum.Font.SourceSansBold
+Shownames.Text = "Show Names"
+Shownames.TextColor3 = Color3.fromRGB(255, 255, 255)
+Shownames.TextSize = 14.000
+
+OpenClose.Name = "Open/Close"
+OpenClose.Parent = mm2
+OpenClose.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+OpenClose.BorderSizePixel = 0
+OpenClose.Position = UDim2.new(0.125880316, 0, 0.957684934, 0)
+OpenClose.Size = UDim2.new(0, 94, 0, 27)
+OpenClose.Font = Enum.Font.SourceSansBold
+OpenClose.Text = "Open"
+OpenClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenClose.TextSize = 14.000
+
+-- Scripts:
+
+local function EZLHG_fake_script() -- mESP.LocalScript 
+	local script = Instance.new('LocalScript', mESP)
+
+	oof = false
+	Frame = script.Parent.Parent
+	button = script.Parent
+	
+	button.MouseButton1Down:Connect(function()
+	if oof == false then
+	  			local Players = game:GetService("Players")
+				
+				for i, Plr in pairs(Players:GetPlayers()) do
+				    for i, Bp in pairs(Plr:GetChildren()) do
+				        if Bp.Name == "Backpack" then
+				            if Bp:FindFirstChild("Knife") ~= nil then
+								if Bp.Parent.Character.UpperTorso:FindFirstChild("BoxHandleAdornment") == nil then
+					                local box = Instance.new("BoxHandleAdornment", Bp.Parent.Character.UpperTorso)
+									box.Size = Bp.Parent.Character.UpperTorso.Size
+									box.Adornee = Bp.Parent.Character.UpperTorso
+									box.ZIndex = 5
+									box.AlwaysOnTop = true
+									box.Color3 = Color3.fromRGB(255, 0, 25)
+									
+									local at0 = Instance.new("Attachment", game.Players.LocalPlayer.Character.UpperTorso)
+									local at1 = Instance.new("Attachment", Bp.Parent.Character.UpperTorso)
+									local beam = Instance.new("Beam", game.Players.LocalPlayer.Character)
+									beam.Color = ColorSequence.new(Color3.fromRGB(255, 0, 25), Color3.fromRGB(255, 0, 25))
+									beam.FaceCamera = true
+									beam.Width0 = 0.2
+									beam.Width1 = 0.2
+									beam.Attachment0 = at0
+									beam.Attachment1 = at1
+								end
+				            end
+				        end
+				    end
+				end
+	  oof = true
+	elseif oof == true then
+	 			local Players = game:GetService("Players")
+				
+				for i, Plr in pairs(Players:GetPlayers()) do
+				    for i, Bp in pairs(Plr:GetChildren()) do
+				        if Bp.Name == "Backpack" then
+				            if Bp:FindFirstChild("Knife") ~= nil then
+								if Bp.Parent.Character.UpperTorso:FindFirstChild("BoxHandleAdornment") ~= nil then
+									Bp.Parent.Character.UpperTorso:FindFirstChild("BoxHandleAdornment"):Destroy()
+									
+								elseif game.Players.LocalPlayer.Character:FindFirstChild("Beam") ~= nil then
+									game.Players.LocalPlayer.Character:FindFirstChild("Beam"):Destroy()
+								end
+				            end
+				        end
+				    end
+				end
+	  oof = false
+	end
+	end)
+end
+coroutine.wrap(EZLHG_fake_script)()
+local function VICBOB_fake_script() -- sESP.LocalScript 
+	local script = Instance.new('LocalScript', sESP)
+
+	oof = false
+	Frame = script.Parent.Parent
+	button = script.Parent
+	
+	button.MouseButton1Down:Connect(function()
+	if oof == false then
+	  			local Players = game:GetService("Players")
+				
+				for i, Plr in pairs(Players:GetPlayers()) do
+				    for i, Bp in pairs(Plr:GetChildren()) do
+				        if Bp.Name == "Backpack" then
+				            if Bp:FindFirstChild("Gun") ~= nil then
+								if Bp.Parent.Character.UpperTorso:FindFirstChild("BoxHandleAdornment") == nil then
+					                local box = Instance.new("BoxHandleAdornment", Bp.Parent.Character.UpperTorso)
+									box.Size = Bp.Parent.Character.UpperTorso.Size
+									box.Adornee = Bp.Parent.Character.UpperTorso
+									box.ZIndex = 5
+									box.AlwaysOnTop = true
+									box.Color3 = Color3.fromRGB(0, 50, 255)
+									
+									local at0 = Instance.new("Attachment", game.Players.LocalPlayer.Character.UpperTorso)
+									local at1 = Instance.new("Attachment", Bp.Parent.Character.UpperTorso)
+									local beam = Instance.new("Beam", game.Players.LocalPlayer.Character)
+									beam.Color = ColorSequence.new(Color3.fromRGB(0, 50, 255), Color3.fromRGB(0, 50, 255))
+									beam.FaceCamera = true
+									beam.Width0 = 0.2
+									beam.Width1 = 0.2
+									beam.Attachment0 = at0
+									beam.Attachment1 = at1
+								end
+				            end
+				        end
+				    end
+				end
+	  oof = true
+	elseif oof == true then
+	  			local Players = game:GetService("Players")
+				
+				for i, Plr in pairs(Players:GetPlayers()) do
+				    for i, Bp in pairs(Plr:GetChildren()) do
+				        if Bp.Name == "Backpack" then
+				            if Bp:FindFirstChild("Gun") ~= nil then
+								if Bp.Parent.Character.UpperTorso:FindFirstChild("BoxHandleAdornment") ~= nil then
+									Bp.Parent.Character.UpperTorso:FindFirstChild("BoxHandleAdornment"):Destroy()
+									
+								elseif game.Players.LocalPlayer.Character:FindFirstChild("Beam") ~= nil then
+									game.Players.LocalPlayer.Character:FindFirstChild("Beam"):Destroy()
+								end
+				            end
+				        end
+				    end
+				end	
+	  oof = false
+	end
+	end)
+	
+end
+coroutine.wrap(VICBOB_fake_script)()
+local function MZST_fake_script() -- farm.LocalScript 
+	local script = Instance.new('LocalScript', farm)
+
+	oof = false
+	Frame = script.Parent.Parent
+	button = script.Parent
+	
+	button.MouseButton1Down:Connect(function()
+	if oof == false then
+	      spawn(function()
+	        while true do
+	        game:GetService("VirtualUser"):Button1Down(Vector2.new(0,0))
+	        wait(20)
+	        end
+	        end)
+	        
+	        spawn(function()
+	        _G.on = true -- the autofarm switch.
+	        _G.KillMurder = false -- this can kill you sometimes so i recommend keeping it false
+	        _G.Godmode = true -- i recommend this instead :) you can use this alone, but it only starts when the match starts.
+	        _G.PrintMurder = true -- if _G.on = true then this will print the murderer.
+	        _G.LoopDelay = 2.5 -- how long it takes for the entire thing to repeat.
+	        -- you can turn on to false and just use godmode :)
+	        -- these are the recommended settings, you can change them, you can execute before the match.
+	        -- it rejoins if you are murderer. You can put this in autoexecute or not.
+	        -- uses e621's fps booster if a certain thing happens :)
+	        
+	        loadstring(game:HttpGet("https://pastebin.com/raw/eNwdRG92"))();
+	        end)
+	  oof = true
+	elseif oof == true then
+	      spawn(function()
+	        while true do
+	        game:GetService("VirtualUser"):Button1Down(Vector2.new(0,0))
+	        wait(20)
+	        end
+	        end)
+	        
+	        spawn(function()
+	        _G.on = false -- the autofarm switch.
+	        _G.KillMurder = false -- this can kill you sometimes so i recommend keeping it false
+	        _G.Godmode = true -- i recommend this instead :) you can use this alone, but it only starts when the match starts.
+	        _G.PrintMurder = true -- if _G.on = true then this will print the murderer.
+	        _G.LoopDelay = 2.5 -- how long it takes for the entire thing to repeat.
+	        -- you can turn on to false and just use godmode :)
+	        -- these are the recommended settings, you can change them, you can execute before the match.
+	        -- it rejoins if you are murderer. You can put this in autoexecute or not.
+	        -- uses e621's fps booster if a certain thing happens :)
+	        
+	        loadstring(game:HttpGet("https://pastebin.com/raw/eNwdRG92"))();
+	        end)
+	  oof = false
+	end
+	end)
+end
+coroutine.wrap(MZST_fake_script)()
+local function DPCRDWP_fake_script() -- gGrabber.LocalScript 
+	local script = Instance.new('LocalScript', gGrabber)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+			local currentX = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X
+			local currentY = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y
+			local currentZ = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z	
+			
+			if workspace:FindFirstChild("GunDrop") ~= nil then
+			
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace:FindFirstChild("GunDrop").CFrame	
+			wait(.25)	
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(currentX, currentY, currentZ)
+				
+			else
+				
+				print ("There's no gun to grab yet, wait for the sherrif to die")
+			
+			wait()
+				
+				
+			end	
+	end)
+	
+end
+coroutine.wrap(DPCRDWP_fake_script)()
+local function HNHPK_fake_script() -- Fly.LocalScript 
+	local script = Instance.new('LocalScript', Fly)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+	    repeat wait() 
+		until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+	local mouse = game.Players.LocalPlayer:GetMouse() 
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer 
+	local torso = plr.Character.Head 
+	local flying = false
+	local deb = true 
+	local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local maxspeed = 400 
+	local speed = 5000 
+	
+	function Fly() 
+	local bg = Instance.new("BodyGyro", torso) 
+	bg.P = 9e4 
+	bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+	bg.cframe = torso.CFrame 
+	local bv = Instance.new("BodyVelocity", torso) 
+	bv.velocity = Vector3.new(0,0.1,0) 
+	bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+	repeat wait() 
+	plr.Character.Humanoid.PlatformStand = true 
+	if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+	speed = speed+.5+(speed/maxspeed) 
+	if speed > maxspeed then 
+	speed = maxspeed 
+	end 
+	elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+	speed = speed-1 
+	if speed < 0 then 
+	speed = 0 
+	end 
+	end 
+	if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+	bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+	lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+	elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+	bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+	else 
+	bv.velocity = Vector3.new(0,0.1,0) 
+	end 
+	bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+	until not flying 
+	ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	speed = 0 
+	bg:Destroy() 
+	bv:Destroy() 
+	plr.Character.Humanoid.PlatformStand = false 
+	end 
+	mouse.KeyDown:connect(function(key) 
+	if key:lower() == "l" then 
+	if flying then flying = false 
+	else 
+	flying = true 
+	Fly() 
+	end 
+	elseif key:lower() == "w" then 
+	ctrl.f = 1 
+	elseif key:lower() == "s" then 
+	ctrl.b = -1 
+	elseif key:lower() == "a" then 
+	ctrl.l = -1 
+	elseif key:lower() == "d" then 
+	ctrl.r = 1 
+	end 
+	end) 
+	mouse.KeyUp:connect(function(key) 
+	if key:lower() == "w" then 
+	ctrl.f = 0 
+	elseif key:lower() == "s" then 
+	ctrl.b = 0 
+	elseif key:lower() == "a" then 
+	ctrl.l = 0 
+	elseif key:lower() == "d" then 
+	ctrl.r = 0 
+	end 
+	end)
+	Fly()
+	end)
+end
+coroutine.wrap(HNHPK_fake_script)()
+local function DVUES_fake_script() -- Noclip.LocalScript 
+	local script = Instance.new('LocalScript', Noclip)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+		    noclip = false
+	game:GetService('RunService').Stepped:connect(function()
+	if noclip then
+	game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+	end
+	end)
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	mouse.KeyDown:connect(function(key)
+	
+	if key == "b" then
+	noclip = not noclip
+	game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+	end
+	end)
+	print('Loaded')
+	print('Press "B" to noclip')
+	end)
+end
+coroutine.wrap(DVUES_fake_script)()
+local function SIQBUD_fake_script() -- TPlobby.LocalScript 
+	local script = Instance.new('LocalScript', TPlobby)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-95.3187027, 139.747604, 21.9296627, 0.0110238306, -0.0509055257, -0.998642564, 1.49011612e-07, 0.998703361, -0.0509086438, 0.999939203, 0.000561046181, 0.0110095516)
+		end)
+end
+coroutine.wrap(SIQBUD_fake_script)()
+local function BDPLHD_fake_script() -- TPmurderer.LocalScript 
+	local script = Instance.new('LocalScript', TPmurderer)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+	local Players = game:GetService("Players")			
+			for i, player in pairs(Players:GetPlayers()) do
+				
+			    local bp = player.Backpack:GetChildren()
+			    for i, tool in pairs(bp) do
+			        if tool.Name == "Knife" then
+													
+				    	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tool.Parent.Parent.Name].Character.HumanoidRootPart.CFrame
+				
+	end
+	end
+	end
+	end)
+end
+coroutine.wrap(BDPLHD_fake_script)()
+local function PGKGGM_fake_script() -- TPsherrif.LocalScript 
+	local script = Instance.new('LocalScript', TPsherrif)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+			local Players = game:GetService("Players")			
+			for i, player in pairs(Players:GetPlayers()) do
+				
+			    local bp = player.Backpack:GetChildren()
+			    for i, tool in pairs(bp) do
+			        if tool.Name == "Gun" then
+													
+				    	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tool.Parent.Parent.Name].Character.HumanoidRootPart.CFrame
+				
+	end
+	end
+	end
+	end)
+end
+coroutine.wrap(PGKGGM_fake_script)()
+local function XGRHG_fake_script() -- TPmap.LocalScript 
+	local script = Instance.new('LocalScript', TPmap)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+			local Workplace = workspace:GetChildren()
+			
+			for i, Thing in pairs(Workplace) do
+			
+			    local ThingChildren = Thing:GetChildren()
+			    for i, Child in pairs(ThingChildren) do
+			        if Child.Name == "Spawns" then
+			           
+			           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Child.Spawn.CFrame
+			
+			        end
+			    end
+			end
+	end)
+end
+coroutine.wrap(XGRHG_fake_script)()
+local function SRMGQZP_fake_script() -- KillAll.LocalScript 
+	local script = Instance.new('LocalScript', KillAll)
+
+	button = script.Parent
+	button.MouseButton1Down:Connect(function()
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("Knife") ~= nil then -- Only works if you're the murderer
+		
+		    	local Players = game:GetService("Players")	
+			    for i, Victim in pairs(Players:GetPlayers()) do
+			        if Victim.Name ~= game.Players.LocalPlayer.Name then
+			
+			            repeat wait()
+			                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Victim.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
+			            until
+			                Victim.Character.Humanoid.Health == 0
+			
+			        end
+			    end
+			
+			else
+			
+			    print ("You need to be murderer in order to do this")
+			
+			wait(3)
+			
+		end
+	end)
+end
+coroutine.wrap(SRMGQZP_fake_script)()
+local function AJXY_fake_script() -- Shownames.LocalScript 
+	local script = Instance.new('LocalScript', Shownames)
+
+	
+end
+coroutine.wrap(AJXY_fake_script)()
+local function HQVILR_fake_script() -- OpenClose.LocalScript 
+	local script = Instance.new('LocalScript', OpenClose)
+
+	script.Parent.MouseButton1Click:connect(function()
+	    script.Parent.Parent.main.Visible = not script.Parent.Parent.main.Visible
+	   end)
+end
+coroutine.wrap(HQVILR_fake_script)()
